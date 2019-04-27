@@ -247,3 +247,5 @@ crontab -e
 
 */2 * * * * command
 #+end_src
+* Idea
+1. 盲目创新的背后是无知
