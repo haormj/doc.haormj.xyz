@@ -1,4 +1,5 @@
 #+TITLE: Document
+#+AUTHOR: Ward Harris
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 * linux
