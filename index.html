@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-27 六 18:08 -->
+<!-- 2019-04-27 六 18:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Document</title>
@@ -253,18 +253,516 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgff8e807">1. linux</a></li>
+<li><a href="#orgfd16415">1. computer</a>
+<ul>
+<li><a href="#orgf2f8bab">1.1. CPU</a></li>
+<li><a href="#org77044dd">1.2. GPU</a></li>
+<li><a href="#org39eb933">1.3. CPU/GPU AI</a></li>
+<li><a href="#orge313c34">1.4. 参考</a></li>
+</ul>
+</li>
+<li><a href="#org9c8dda5">2. DNS</a>
+<ul>
+<li><a href="#orgc4ffd33">2.1. 通配符域名</a></li>
+<li><a href="#org7735ebc">2.2. 参考</a></li>
+</ul>
+</li>
+<li><a href="#org394ea0d">3. Docker</a>
+<ul>
+<li><a href="#org9e8343f">3.1. ubuntu 安装</a></li>
+<li><a href="#orge5c62c3">3.2. centos 安装</a></li>
+<li><a href="#org0019cee">3.3. 使用</a>
+<ul>
+<li><a href="#org2bda3f8">3.3.1. 给运行中容器增加端口映射</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8ff5859">4. etcd</a>
+<ul>
+<li><a href="#org2feb894">4.1. 每次访问 etcd 都会重定向到外网</a></li>
+<li><a href="#orgf8fcdb2">4.2. v2.3.4 etcdctl unexpected status code 401</a></li>
+<li><a href="#org48a311a">4.3. root 用户, root/guest 角色</a></li>
+<li><a href="#orgcddec3c">4.4. 参考</a></li>
+</ul>
+</li>
+<li><a href="#org3a2fe53">5. linux</a>
+<ul>
+<li><a href="#org8b06b3f">5.1. ab(apache bench)</a>
+<ul>
+<li><a href="#org22660cf">5.1.1. 介绍</a></li>
+</ul>
+</li>
+<li><a href="#orgb959057">5.2. awk</a>
+<ul>
+<li><a href="#orgc46a157">5.2.1. 输出满足条件的行</a></li>
+</ul>
+</li>
+<li><a href="#org8a589dd">5.3. boot</a>
+<ul>
+<li><a href="#orgf5b69de">5.3.1. 清理 boot 分区</a></li>
+</ul>
+</li>
+<li><a href="#orgee6169e">5.4. cgroup</a>
+<ul>
+<li><a href="#org21a9045">5.4.1. cpu</a></li>
+<li><a href="#orgdcfc755">5.4.2. memory</a></li>
+<li><a href="#orgef0d928">5.4.3. 参考</a></li>
+</ul>
+</li>
+<li><a href="#orgb6b9930">5.5. crontab</a>
+<ul>
+<li><a href="#org07f9ceb">5.5.1. 简介</a></li>
+<li><a href="#org99cd635">5.5.2. 使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgff8e807" class="outline-2">
-<h2 id="orgff8e807"><span class="section-number-2">1</span> linux</h2>
+<div id="outline-container-orgfd16415" class="outline-2">
+<h2 id="orgfd16415"><span class="section-number-2">1</span> computer</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf2f8bab" class="outline-3">
+<h3 id="orgf2f8bab"><span class="section-number-3">1.1</span> CPU</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+中央处理器 （英语：Central Processing Unit，缩写：CPU），是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据。计算机的可编程性主要是指对中央处理器的编程。
+</p>
+</div>
+</div>
+<div id="outline-container-org77044dd" class="outline-3">
+<h3 id="org77044dd"><span class="section-number-3">1.2</span> GPU</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+图形处理器（英语：graphics processing unit，缩写：GPU），又称显示核心、视觉处理器、显示芯片或绘图芯片，是一种专门在个人计算机、工作站、游戏机和一些移动设备（如平板电脑、智能手机等）上运行绘图运算工作的微处理器。
+</p>
+</div>
+</div>
+<div id="outline-container-org39eb933" class="outline-3">
+<h3 id="org39eb933"><span class="section-number-3">1.3</span> CPU/GPU AI</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+在 AI 中需要处理大量的数据,而根据这些数据的特点,GPU 的速度要远远快于 CPU,从而 GPU 的发展在 AI 的推动下会更快的发展.
+</p>
+</div>
+</div>
+<div id="outline-container-orge313c34" class="outline-3">
+<h3 id="orge313c34"><span class="section-number-3">1.4</span> 参考</h3>
+<div class="outline-text-3" id="text-1-4">
+<ol class="org-ol">
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8">中央处理器</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9C%96%E5%BD%A2%E8%99%95%E7%90%86%E5%99%A8">图形处理器</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c8dda5" class="outline-2">
+<h2 id="org9c8dda5"><span class="section-number-2">2</span> DNS</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc4ffd33" class="outline-3">
+<h3 id="orgc4ffd33"><span class="section-number-3">2.1</span> 通配符域名</h3>
+</div>
+<div id="outline-container-org7735ebc" class="outline-3">
+<h3 id="org7735ebc"><span class="section-number-3">2.2</span> 参考</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F">域名系统</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%A0%B9%E7%B6%B2%E5%9F%9F%E5%90%8D%E7%A8%B1%E4%BC%BA%E6%9C%8D%E5%99%A8">根域名服务器</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wildcard_DNS_record">Wildcard DNS record</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc4592.txt">The Role of Wildcards in the Domain Name System</a></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org394ea0d" class="outline-2">
+<h2 id="org394ea0d"><span class="section-number-2">3</span> Docker</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9e8343f" class="outline-3">
+<h3 id="org9e8343f"><span class="section-number-3">3.1</span> ubuntu 安装</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<a href="https://docs.docker.com/">https://docs.docker.com/</a>
+</p>
+
+<p>
+<a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">https://docs.docker.com/install/linux/docker-ce/ubuntu/</a>
+</p>
+
+<p>
+Ubuntu18.04 安装 docker
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt-get remove docker docker-engine docker.io
+sudo apt-get update
+sudo apt-get install <span style="color: #2aa198;">\</span>
+    apt-transport-https <span style="color: #2aa198;">\</span>
+    ca-certificates <span style="color: #2aa198;">\</span>
+    curl <span style="color: #2aa198;">\</span>
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint <span style="color: #d75fd7;">0EBFCD88</span>
+sudo add-apt-repository <span style="color: #2aa198;">\</span>
+   <span style="color: #2aa198;">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
+<span style="color: #2aa198;">   $(</span><span style="color: #fa8072;">lsb_release</span><span style="color: #2aa198;"> -cs) \</span>
+<span style="color: #2aa198;">   stable"</span>
+sudo apt-get update
+sudo apt-get install docker-ce
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge5c62c3" class="outline-3">
+<h3 id="orge5c62c3"><span class="section-number-3">3.2</span> centos 安装</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce">https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo yum install -y yum-utils <span style="color: #2aa198;">\</span>
+  device-mapper-persistent-data <span style="color: #2aa198;">\</span>
+  lvm2
+sudo yum-config-manager <span style="color: #2aa198;">\</span>
+    --add-repo <span style="color: #2aa198;">\</span>
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+sudo systemctl enable docker
+sudo systemctl start docker
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0019cee" class="outline-3">
+<h3 id="org0019cee"><span class="section-number-3">3.3</span> 使用</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org2bda3f8" class="outline-4">
+<h4 id="org2bda3f8"><span class="section-number-4">3.3.1</span> 给运行中容器增加端口映射</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+<a href="http://yaxin-cn.github.io/Docker/expose-port-of-running-docker-container.html">http://yaxin-cn.github.io/Docker/expose-port-of-running-docker-container.html</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">iptables -A DOCKER ! -i docker0 -o docker0 -p tcp --dport <span style="color: #d75fd7;">27017</span> -d <span style="color: #d75fd7;">172.17.0.2</span> -j ACCEPT
+iptables -t nat -A POSTROUTING -p tcp --dport <span style="color: #d75fd7;">27017</span> -s <span style="color: #d75fd7;">172.17.0.2</span> -d <span style="color: #d75fd7;">172.17.0.2</span> -j MASQUERADE
+iptables -t nat -A DOCKER ! -i dokcer0 -p tcp --dport <span style="color: #d75fd7;">27017</span> -j DNAT --to-destination <span style="color: #d75fd7;">172.17.0.2:27017</span>
+</pre>
+</div>
+
+<p>
+docker run &#x2013;link 说明
+</p>
+
+<p>
+<a href="https://www.jianshu.com/p/21d66ca6115e">https://www.jianshu.com/p/21d66ca6115e</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ff5859" class="outline-2">
+<h2 id="org8ff5859"><span class="section-number-2">4</span> etcd</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2feb894" class="outline-3">
+<h3 id="org2feb894"><span class="section-number-3">4.1</span> 每次访问 etcd 都会重定向到外网</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<code>--advertise-client-urls</code> 外界访问当前的 url 都是通过这个参数配置的,只有出现在这个参数上的值才会被外界访问,和实际 listen 的不完全对等
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8fcdb2" class="outline-3">
+<h3 id="orgf8fcdb2"><span class="section-number-3">4.2</span> v2.3.4 etcdctl unexpected status code 401</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+这个可以打开 debug,基本上是没有权限的
+</p>
+</div>
+</div>
+<div id="outline-container-org48a311a" class="outline-3">
+<h3 id="org48a311a"><span class="section-number-3">4.3</span> root 用户, root/guest 角色</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>root 用户,在启动安全模式的时是必须的创建的,而且会被授予 root 角色</li>
+<li>root 角色有所有权限</li>
+<li>guest 没有提供认证信息的请求有那些权限</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcddec3c" class="outline-3">
+<h3 id="orgcddec3c"><span class="section-number-3">4.4</span> 参考</h3>
+<div class="outline-text-3" id="text-4-4">
+<ol class="org-ol">
+<li><a href="https://doczhcn.gitbook.io/etcd/index/index-1/clustering">搭建 etcd 集群</a></li>
+<li><a href="https://coreos.com/etcd/docs/latest/v2/authentication.html">Authentication Guide</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a2fe53" class="outline-2">
+<h2 id="org3a2fe53"><span class="section-number-2">5</span> linux</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8b06b3f" class="outline-3">
+<h3 id="org8b06b3f"><span class="section-number-3">5.1</span> ab(apache bench)</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org22660cf" class="outline-4">
+<h4 id="org22660cf"><span class="section-number-4">5.1.1</span> 介绍</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+HTTP 服务性能测试工具
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb959057" class="outline-3">
+<h3 id="orgb959057"><span class="section-number-3">5.2</span> awk</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgc46a157" class="outline-4">
+<h4 id="orgc46a157"><span class="section-number-4">5.2.1</span> 输出满足条件的行</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<div class="org-src-container">
+<pre class="src src-shell">awk <span style="color: #2aa198;">'{if ($1 &gt; 10) print $0}'</span> filename
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">input</span>
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">1 hello</span>
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">2 world</span>
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">100 who are you</span>
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">output</span>
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">100 who are you</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8a589dd" class="outline-3">
+<h3 id="org8a589dd"><span class="section-number-3">5.3</span> boot</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orgf5b69de" class="outline-4">
+<h4 id="orgf5b69de"><span class="section-number-4">5.3.1</span> 清理 boot 分区</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org524aa9d"></a>ubuntu18.04<br />
+<div class="outline-text-5" id="text-5-3-1-1">
+<div class="org-src-container">
+<pre class="src src-shell">dpkg --get-selections|grep linux-image
+uname -a
+sudo apt-get purge  &#20869;&#26680;&#21517;&#31216;
+<span style="color: #008787; background-color: #262626;"># </span><span style="color: #008787; background-color: #262626;">&#30452;&#25509;&#36816;&#34892;&#20197;&#19979;&#33050;&#26412;&#23601;&#21487;&#20197;&#20102;</span>
+dpkg --get-selections| grep linux-image | grep deinstall | awk <span style="color: #2aa198;">'{print $1}'</span> | xargs apt-get purge -y
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgee6169e" class="outline-3">
+<h3 id="orgee6169e"><span class="section-number-3">5.4</span> cgroup</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org21a9045" class="outline-4">
+<h4 id="org21a9045"><span class="section-number-4">5.4.1</span> cpu</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<pre class="example">
+cgroup.clone_children
+cgroup.event_control
+cgroup.procs
+cpuacct.stat
+cpuacct.usage
+cpuacct.usage_percpu
+# 时间周期长度
+cpu.cfs_period_us
+# 在当前 cgroup 在设置的周期长度内所能使用的 cpu 时间数
+cpu.cfs_quota_us
+cpu.rt_period_us
+cpu.rt_runtime_us
+# cpu 的相对值
+cpu.shares
+# cpu 统计值
+cpu.stat
+notify_on_release
+tasks
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdcfc755" class="outline-4">
+<h4 id="orgdcfc755"><span class="section-number-4">5.4.2</span> memory</h4>
+<div class="outline-text-4" id="text-5-4-2">
+<pre class="example">
+ cgroup.clone_children 
+cgroup.event_control
+# 进程 id
+cgroup.procs
+# 线程 id
+tasks
+# 内存使用量达到上限值的次数
+memory.failcnt 
+# 触发系统尽可能回收当前 cgroup 可以回收的内存
+memory.force_empty
+# 限制内存的大小
+memory.limit_in_bytes 
+# 历史内存最大使用量
+memory.max_usage_in_bytes 
+memory.move_charge_at_immigrate
+memory.numa_stat
+memory.oom_control
+memory.pressure_level
+# 当前限制的内存软额度,当系统内存吃紧时,会回收超过 soft limit 的内存
+memory.soft_limit_in_bytes
+# 当前内存使用情况
+memory.stat 
+memory.swappiness
+# 当前已使用内存
+memory.usage_in_bytes
+# 是否将子 cgroup 的使用情况统计到当前 cgroup 中
+memory.use_hierarchy
+notify_on_release
+# memsw
+memory.memsw.failcnt 
+memory.memsw.limit_in_bytes
+memory.memsw.max_usage_in_bytes
+memory.memsw.usage_in_bytes
+# kmem
+memory.kmem.failcnt
+memory.kmem.limit_in_bytes
+memory.kmem.max_usage_in_bytes 
+memory.kmem.slabinfo
+memory.kmem.tcp.failcnt
+memory.kmem.tcp.limit_in_bytes
+memory.kmem.tcp.max_usage_in_bytes
+memory.kmem.tcp.usage_in_bytes
+memory.kmem.usage_in_bytes
+</pre>
+</div>
+</div>
+<div id="outline-container-orgef0d928" class="outline-4">
+<h4 id="orgef0d928"><span class="section-number-4">5.4.3</span> 参考</h4>
+<div class="outline-text-4" id="text-5-4-3">
+<ol class="org-ol">
+<li><a href="https://segmentfault.com/a/1190000008125359">Linux Cgroup 系列（04）：限制 cgroup 的内存使用（subsystem 之 memory）</a></li>
+<li><a href="https://segmentfault.com/a/1190000008323952">Linux Cgroup 系列（05）：限制 cgroup 的 CPU 使用（subsystem 之 cpu）</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb6b9930" class="outline-3">
+<h3 id="orgb6b9930"><span class="section-number-3">5.5</span> crontab</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org07f9ceb" class="outline-4">
+<h4 id="org07f9ceb"><span class="section-number-4">5.5.1</span> 简介</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<p>
+主要是 linux 用来做定时任务,可以具体的分钟/小时/天/月/周
+</p>
+</div>
+</div>
+<div id="outline-container-org99cd635" class="outline-4">
+<h4 id="org99cd635"><span class="section-number-4">5.5.2</span> 使用</h4>
+<div class="outline-text-4" id="text-5-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgf6d7153"></a>说明<br />
+<div class="outline-text-5" id="text-5-5-2-1">
+<pre class="example">
+usage:	crontab [-u user] file
+  crontab [ -u user ] [ -i ] { -e | -l | -r }
+    (default operation is replace, per 1003.2)
+  -e	(edit user's crontab)
+  -l	(list user's crontab)
+  -r	(delete user's crontab)
+  -i	(prompt before deleting user's crontab)
+</pre>
+</div>
+</li>
+<li><a id="orge391a24"></a>备份<br />
+<div class="outline-text-5" id="text-5-5-2-2">
+<pre class="example">
+crontab -l &gt; crontab.bak
+</pre>
+</div>
+</li>
+<li><a id="org2717773"></a>恢复<br />
+<div class="outline-text-5" id="text-5-5-2-3">
+<pre class="example">
+crontab filename
+</pre>
+</div>
+</li>
+<li><a id="org8ef604e"></a>删除<br />
+<div class="outline-text-5" id="text-5-5-2-4">
+<pre class="example">
+crontab -r
+</pre>
+</div>
+</li>
+<li><a id="org1ee5a26"></a>列出<br />
+<div class="outline-text-5" id="text-5-5-2-5">
+<pre class="example">
+crontab -l
+</pre>
+</div>
+</li>
+<li><a id="org8c6de3a"></a>编辑<br />
+<div class="outline-text-5" id="text-5-5-2-6">
+<pre class="example">
+crontab -e
+</pre>
+</div>
+</li>
+<li><a id="org5c38681"></a>间隔 2 分钟执行一次<br />
+<div class="outline-text-5" id="text-5-5-2-7">
+<pre class="example">
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+
+*/2 * * * * command
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ward Harris</p>
-<p class="date">Created: 2019-04-27 六 18:08</p>
+<p class="date">Created: 2019-04-27 六 18:43</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
