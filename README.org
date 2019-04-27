@@ -1,9 +1,11 @@
-#+TITLE: Document
+#+TITLE: Personnal Document
 #+AUTHOR: Ward Harris
 #+EMAIL: haormj@gmail.com
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+OPTIONS: toc:2
+#+OPTIONS: num:nil
 
-* computer
+* Computer
 ** CPU
 中央处理器 （英语：Central Processing Unit，缩写：CPU），是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据。计算机的可编程性主要是指对中央处理器的编程。
 ** GPU
@@ -75,7 +77,7 @@ iptables -t nat -A DOCKER ! -i dokcer0 -p tcp --dport 27017 -j DNAT --to-destina
 docker run --link 说明
 
 https://www.jianshu.com/p/21d66ca6115e
-* etcd
+* ETCD 
 ** 每次访问 etcd 都会重定向到外网
 =--advertise-client-urls= 外界访问当前的 url 都是通过这个参数配置的,只有出现在这个参数上的值才会被外界访问,和实际 listen 的不完全对等
 ** v2.3.4 etcdctl unexpected status code 401
@@ -87,7 +89,7 @@ https://www.jianshu.com/p/21d66ca6115e
 ** 参考
 1. [[https://doczhcn.gitbook.io/etcd/index/index-1/clustering][搭建 etcd 集群]]
 2. [[https://coreos.com/etcd/docs/latest/v2/authentication.html][Authentication Guide]]
-* linux
+* Linux
 ** ab(apache bench)
 *** 介绍
  HTTP 服务性能测试工具
