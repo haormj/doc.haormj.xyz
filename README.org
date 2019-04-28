@@ -247,5 +247,40 @@ crontab -e
 
 */2 * * * * command
 #+end_src
+
+* nginx
+** FQA
+*** worker_connections are not enough while connecting to upstream   
+[[http://nginx.org/en/docs/ngx_core_module.html#worker_connections][官方文档]] 直接调整 worker 的连接数即可,这里的连接数是 nginx 的连接总数
+#+begin_src 
+events {
+    worker_connections  1024;
+}
+#+end_src
+调整为期望大小,不过这个值调整后可能会遇到下面问题
+#+begin_src 
+events {
+    worker_connections  10000;
+}
+#+end_src
+修改完配置文件后
+#+begin_src 
+# 测试配置文件
+nginx -t 
+# 重载配置
+nginx -s reload
+#+end_src
+*** 10000 worker_connections exceed open file resource limit: 1024  
+[[http://nginx.org/en/docs/ngx_core_module.html#worker_rlimit_nofile][官方文档]] 这个问题主要是因为 nginx 支持的打开文件数量为 1024,但配置的最大连接数为 10000,可以通过在 nginx 中增加以下配置
+#+begin_src
+worker_rlimit_nofile 10000;
+#+end_src
+修改完配置文件后
+#+begin_src 
+# 测试配置文件
+nginx -t 
+# 重载配置
+nginx -s reload
+#+end_src
 * Idea
 1. 盲目创新的背后是无知
