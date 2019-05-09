@@ -4,7 +4,11 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 #+OPTIONS: toc:2
 #+OPTIONS: num:nil
-
+* Information
+| 网站                    | 描述                                         |
+|-------------------------+----------------------------------------------|
+| http://www.caict.ac.cn/ | 中国信通院,国家高端专业智库 产业创新发展平台 |
+| https://csrc.nist.gov/  | 美国国家标准与技术研究院,计算机安全资源中心  |
 * Computer
 ** CPU
 中央处理器 （英语：Central Processing Unit，缩写：CPU），是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据。计算机的可编程性主要是指对中央处理器的编程。
