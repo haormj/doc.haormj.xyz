@@ -252,6 +252,9 @@ crontab -e
 */2 * * * * command
 #+end_src
 
+* Physics  
+** Stellarium  
+[[https://stellarium.org/zh_CN/][Stellarium]] 是一款开源的天象模拟软件。它以 3D 形式展示了极为逼真的星空，就像你在真实世界使用裸眼，双筒望远镜或天文望远镜看到的一样。
 * nginx
 ** FQA
 *** worker_connections are not enough while connecting to upstream   
