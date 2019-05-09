@@ -289,5 +289,9 @@ nginx -t
 # 重载配置
 nginx -s reload
 #+end_src
+* Cryptography  
+** FQA
+*** PCKS#5 和 PCKS#7 的区别
+根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
 * Idea
 1. 盲目创新的背后是无知
