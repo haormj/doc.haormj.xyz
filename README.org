@@ -293,6 +293,13 @@ nginx -s reload
 ** FQA
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
+* Proxy
+1. 安装 redsocks, 主要是处理 tcp 流量
+2. 配置 iptables, 将所有 tcp 流量都转发给 redsocks 处理包装为 socks 包
+3. 所有保留地址不需要处理
+4. redsocks 自己处理过的包,不需要继续处理
+5. 防止 dns 中毒,可以通过修改 hosts 实现
+
 * FQA
 ** 正向代理和反向代理?
 - 正向代理: 客户端通过代理访问服务器, 由客户端发起
