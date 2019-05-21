@@ -259,7 +259,7 @@ crontab -e
 * Physics  
 ** Stellarium  
 [[https://stellarium.org/zh_CN/][Stellarium]] 是一款开源的天象模拟软件。它以 3D 形式展示了极为逼真的星空，就像你在真实世界使用裸眼，双筒望远镜或天文望远镜看到的一样。
-* nginx
+* Nginx
 ** FQA
 *** worker_connections are not enough while connecting to upstream   
 [[http://nginx.org/en/docs/ngx_core_module.html#worker_connections][官方文档]] 直接调整 worker 的连接数即可,这里的连接数是 nginx 的连接总数
