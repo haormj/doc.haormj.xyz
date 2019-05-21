@@ -297,6 +297,8 @@ nginx -s reload
 ** FQA
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
+* Proxy
+1. [[https://hub.docker.com/r/haormj/redsocks][redsocks]]
 * FQA
 ** 正向代理和反向代理?
 - 正向代理: 客户端通过代理访问服务器, 由客户端发起
