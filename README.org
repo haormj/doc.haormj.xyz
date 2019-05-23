@@ -253,6 +253,13 @@ crontab -e
 */2 * * * * command
 #+end_src
 
+** mtr
+#+begin_src  shell
+# 分析到达特定主机的网络情况
+mtr -r 8.8.8.8
+# 测试到主机某个 TCP 监听端口的网络情况
+mtr --tcp --port 8888 -r 8.8.8.8
+#+end_src
 ** FQA
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
