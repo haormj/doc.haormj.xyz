@@ -109,6 +109,10 @@ awk '{if ($1 > 10) print $0}' filename
 # output
 # 100 who are you
 #+end_src
+*** printf
+#+begin_src shell
+awk -F , '{printf "|%s|%s|%s|\n", $2,$4,$5}'
+#+end_src
 ** boot
 *** 清理 boot 分区
 **** ubuntu18.04
