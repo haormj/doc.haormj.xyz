@@ -5,10 +5,11 @@
 #+OPTIONS: toc:2
 #+OPTIONS: num:nil
 * Information
-| 网站                    | 描述                                         |
-|-------------------------+----------------------------------------------|
-| http://www.caict.ac.cn/ | 中国信通院,国家高端专业智库 产业创新发展平台 |
-| https://csrc.nist.gov/  | 美国国家标准与技术研究院,计算机安全资源中心  |
+| 网站                         | 描述                                         |
+|------------------------------+----------------------------------------------|
+| http://www.caict.ac.cn/      | 中国信通院,国家高端专业智库 产业创新发展平台 |
+| https://csrc.nist.gov/       | 美国国家标准与技术研究院,计算机安全资源中心  |
+| http://www.brendangregg.com/ | 系统性能分析                                 |
 * Computer
 ** CPU
 中央处理器 （英语：Central Processing Unit，缩写：CPU），是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据。计算机的可编程性主要是指对中央处理器的编程。
@@ -107,6 +108,10 @@ awk '{if ($1 > 10) print $0}' filename
 # 100 who are you
 # output
 # 100 who are you
+#+end_src
+*** printf
+#+begin_src shell
+awk -F , '{printf "|%s|%s|%s|\n", $2,$4,$5}'
 #+end_src
 ** boot
 *** 清理 boot 分区
@@ -252,10 +257,17 @@ crontab -e
 */2 * * * * command
 #+end_src
 
+** mtr
+#+begin_src  shell
+# 分析到达特定主机的网络情况
+mtr -r 8.8.8.8
+# 测试到主机某个 TCP 监听端口的网络情况
+mtr --tcp --port 8888 -r 8.8.8.8
+#+end_src
 ** FQA
+*** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
 [[http://ubuntuhandbook.org/index.php/2014/09/wifi-hotspot-access-point-not-supported/][文章]]
-
 * Physics  
 ** Stellarium  
 [[https://stellarium.org/zh_CN/][Stellarium]] 是一款开源的天象模拟软件。它以 3D 形式展示了极为逼真的星空，就像你在真实世界使用裸眼，双筒望远镜或天文望远镜看到的一样。
