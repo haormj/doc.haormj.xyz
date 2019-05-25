@@ -298,7 +298,66 @@ nginx -s reload
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
 * Proxy
-1. [[https://hub.docker.com/r/haormj/redsocks][redsocks]]
+** [[https://hub.docker.com/r/haormj/redsocks][redsocks]]
+** kcptun
+*** server
+    #+begin_src 
+[Unit]
+Description=Kcptun Server Service
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/kcptun 
+ExecStart=/opt/kcptun/server_linux_amd64 \
+  -t "127.0.0.1:15789" \
+  -l ":28796" \
+  --key "it's a secrect" \
+  -mode fast3 \
+  -nocomp \
+  -sockbuf 16777217 \
+  -dscp 46 
+MemoryLimit=2G
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target 
+    #+end_src
+*** client
+    #+begin_src
+[Unit]
+Description=Kcptun Client Service
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/kcptun 
+ExecStart=/opt/kcptun/client_linux_amd64 \
+  -r "x.x.x.x:28796" \
+  -l ":15789" \
+  --key "it's a secrect" \
+  -mode fast3 \
+  -nocomp \
+  -autoexpire 900 \
+  -sockbuf 16777217 \
+  -dscp 46
+ 
+MemoryLimit=2G
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target 
+    #+end_src
 * FQA
 ** 正向代理和反向代理?
 - 正向代理: 客户端通过代理访问服务器, 由客户端发起
