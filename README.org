@@ -310,8 +310,14 @@ nginx -s reload
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
 * Proxy
-** [[https://hub.docker.com/r/haormj/redsocks][redsocks]]
+** redsocks
+*** profile
+[[https://github.com/semigodking/redsocks][code]]
+*** usage 
+[[https://hub.docker.com/r/haormj/redsocks][docker]]
 ** kcptun
+*** profile
+[[https://github.com/xtaci/kcptun][code]]
 *** server
     #+begin_src 
 [Unit]
@@ -369,6 +375,49 @@ RestartSec=2s
 
 [Install]
 WantedBy=multi-user.target 
+    #+end_src
+** shadowsocks
+*** profile
+[[https://github.com/shadowsocks/shadowsocks-go][code]]
+*** server 
+    #+begin_src 
+[Unit]
+Description=Shadowsocks
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/shadowsocks
+ExecStart=/opt/shadowsocks/shadowsocks-server -u
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target    
+    #+end_src
+*** client
+    #+begin_src 
+[Unit]
+Description=Shadowsocks
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/shadowsocks
+ExecStart=/opt/shadowsocks/shadowsocks-local
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target    
     #+end_src
 * FQA
 ** 正向代理和反向代理?
