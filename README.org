@@ -305,6 +305,15 @@ nginx -t
 # 重载配置
 nginx -s reload
 #+end_src
+* Redis
+** FQA
+*** aof 和 rdb 同时开启,redis 重启加载哪个文件?
+    #+begin_quote
+https://redis.io/topics/persistence#redis-persistence
+
+It is possible to combine both AOF and RDB in the same instance. Notice that, in this case, when Redis restarts the AOF file will be used to reconstruct the original dataset since it is guaranteed to be the most complete.    
+    #+end_quote
+aof 文件
 * Cryptography  
 ** FQA
 *** PCKS#5 和 PCKS#7 的区别
