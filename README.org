@@ -256,7 +256,10 @@ crontab -e
 
 */2 * * * * command
 #+end_src
-
+**** 间隔 5 小时执行一次
+     #+begin_src 
+ * */5 * * * command     
+     #+end_src
 ** mtr
 #+begin_src  shell
 # 分析到达特定主机的网络情况
