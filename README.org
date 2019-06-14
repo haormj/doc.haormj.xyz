@@ -268,6 +268,8 @@ mtr --tcp --port 8888 -r 8.8.8.8
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
 [[http://ubuntuhandbook.org/index.php/2014/09/wifi-hotspot-access-point-not-supported/][文章]]
+* Performance 
+** cpu
 * Physics  
 ** Stellarium  
 [[https://stellarium.org/zh_CN/][Stellarium]] 是一款开源的天象模拟软件。它以 3D 形式展示了极为逼真的星空，就像你在真实世界使用裸眼，双筒望远镜或天文望远镜看到的一样。
@@ -418,6 +420,58 @@ RestartSec=2s
 
 [Install]
 WantedBy=multi-user.target    
+    #+end_src
+** shadowsocks2
+*** profile
+[[https://github.com/shadowsocks/go-shadowsocks2][code]] 
+*** server
+    #+begin_src 
+[Unit]
+Description=Shadowsocks2
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/shadowsocks2
+ExecStart=/opt/shadowsocks2/shadowsocks2 \
+  -s 'ss://AEAD_CHACHA20_POLY1305:your-password@:23586' \
+  -verbose
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target      
+    #+end_src
+*** client
+    #+begin_src 
+[Unit]
+Description=Shadowsocks2
+After=storage.service
+After=network.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+Type=simple
+WorkingDirectory=/opt/shadowsocks2
+ExecStart=/opt/shadowsocks2/shadowsocks2 \
+ -c 'ss://AEAD_CHACHA20_POLY1305:your-password@[server_address]:23586' \
+ -verbose \
+ -socks :1080 \
+ -redir :12345 \ 
+ -u \
+ -udptun :8053=8.8.8.8:53,:8054=8.8.4.4:53 \
+ -tcptun :8053=8.8.8.8:53,:8054=8.8.4.4:53
+
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target     
     #+end_src
 * FQA
 ** 正向代理和反向代理?
