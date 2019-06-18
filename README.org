@@ -320,6 +320,28 @@ It is possible to combine both AOF and RDB in the same instance. Notice that, in
     #+end_quote
 aof 文件
 * Cryptography  
+** OpenSSL
+*** RSA
+    #+begin_src
+# 生成 RSA 私钥
+openssl genrsa -out rsa.key 2048
+# 生成 RSA 公钥
+openssl rsa -in rsa.key -pubout -out rsa.pub
+    #+end_src
+*** EC
+   #+begin_src 
+# 生成 EC 私钥
+openssl ecparam -name secp256k1 -genkey -out ec.key
+# 生成 EC 公钥
+openssl ec -in ec.key -pubout -out ec.pub   
+   #+end_src
+*** 数字签名 
+    #+begin_src 
+# 签名
+openssl dgst -sign private_key -out sign file
+# 验签
+openssl dgst -verify public_key -signature sign file    
+    #+end_src
 ** FQA
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
