@@ -278,6 +278,8 @@ echo 262144 > /sys/module/nf_conntrack/parameters/hashsize
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
 [[http://ubuntuhandbook.org/index.php/2014/09/wifi-hotspot-access-point-not-supported/][文章]]
+*** 18.04 =Ctrl Shift c= 失效
+直接到 =Settings > Devices > KeyBoard= 中对占用相关键进行修改
 * Performance 
 ** cpu
 * Physics  
