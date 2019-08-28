@@ -274,6 +274,15 @@ mtr --tcp --port 8888 -r 8.8.8.8
 sysctl -w net.netfilter.nf_conntrack_max=1048576
 echo 262144 > /sys/module/nf_conntrack/parameters/hashsize
    #+end_src
+** wireshark
+   #+begin_src 
+sshpass -p 'xxx' ssh -o StrictHostKeyChecking=no root@hostname 'tcpdump -s 0 -U -n -w - -i br-lan not port 22' | wireshark -k -i -
+   #+end_src
+** nmap
+   #+begin_src 
+# 指定网段内扫描特定端口
+nmap -p 80 192.168.1.0/24   
+   #+end_src
 ** FQA
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
