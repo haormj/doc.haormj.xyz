@@ -289,6 +289,14 @@ sshpass -p 'xxx' ssh -o StrictHostKeyChecking=no root@hostname 'tcpdump -s 0 -U 
 # 指定网段内扫描特定端口
 nmap -p 80 192.168.1.0/24   
    #+end_src
+** ssh
+*** ssh config
+    #+begin_src 
+Host github.com
+HostName github.com
+User git
+IdentityFile /home/haormj/.ssh/github
+    #+end_src
 ** FQA
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
