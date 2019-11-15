@@ -297,6 +297,17 @@ HostName github.com
 User git
 IdentityFile /home/haormj/.ssh/github
     #+end_src
+** nslookup 
+解析域名指定 name server
+
+   #+begin_src 
+   nslookup www.baidu.com 8.8.8.8
+   #+end_src
+** dig
+解析域名指定 name server
+   #+begin_src 
+   dig @8.8.8.8 www.baidu.com
+   #+end_src
 ** FQA
 *** 进程内存占用分析
 *** ubuntu18.04 无法开启 AP 热点
