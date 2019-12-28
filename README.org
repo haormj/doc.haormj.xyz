@@ -386,13 +386,13 @@ openssl dgst -sign private_key -out sign file
 openssl dgst -verify public_key -signature sign file    
     #+end_src
 *** 校验在线证书
-```
-openssl s_client -connect haormj.xyz:443 -servername haormj.xyz -state
-```
+    #+begin_src 
+openssl s_client -connect haormj.xyz:443 -servername haormj.xyz -state    
+    #+end_src
 *** 查看线上证书详情
-```
+#+begin_src 
 openssl s_client -connect haormj.xyz:443 -servername haormj.xyz -showcerts </dev/null 2>/dev/null | sed -n '/BEGIN CERTIFICATE/,/END CERT/p' | openssl x509 -noout -text
-```
+#+end_src
 ** FQA
 *** PCKS#5 和 PCKS#7 的区别
 根据[[https://en.wikipedia.org/wiki/Padding_%28cryptography%29#PKCS#5_and_PKCS#7][Padding]]描述,PCKS#5 和 PCKS#7 原理相同,只是 PCKS#5 当时定义的块大小为 64 比特 
